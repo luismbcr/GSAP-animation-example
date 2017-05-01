@@ -1,5 +1,3 @@
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
-
 @font-face {
     src: url(../fonts/Asap-Regular.ttf);
     font-family: ASAP;
@@ -40,15 +38,13 @@ body {
         border-radius: 10px;
         background-color: #fff;
         border: none;
-         color: #000000;
-    }
-
-    button:hover{
-        background-color: #88ce02;
-    }
-
-    button:focus{
-        outline: 0;
+        color: #000000;
+        &:hover{
+            background-color: #88ce02;
+        }
+        &:focus{
+            outline: 0;
+        }
     }
 }
 
