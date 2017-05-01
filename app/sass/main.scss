@@ -1,2 +1,117 @@
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+@font-face {
+    src: url(../fonts/Asap-Regular.ttf);
+    font-family: ASAP;
+}
+
+@font-face {
+    src: url(../fonts/Asap-Bold.ttf);
+    font-family: ASAP_BOLD;
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #000000;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    color: #ffffff;
+    font-family: ASAP;
+    overflow: hidden;
+}
+.controlButtons {
+    position: absolute;
+    left: 20px;
+    width: 100px;
+    button {
+        height: 50px;
+        width: 100px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: none;
+        color: #000000;
+        &:hover{
+            background-color: #88ce02;
+        }
+        &:focus{
+            outline: 0;
+        }
+    }
+}
+
+.content-holder {
+    position: relative;
+    width: 80%;
+    height: 85%;
+    margin: 0 auto;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .tools {
+        position: relative;
+        top:-150px;
+        margin: 50px auto 0 auto;
+        height: 100px;
+        max-width: 800px;
+        text-align: center;
+        img {
+            position: relative;
+            height: 80%;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
+
+
+
+    .title {
+        text-align: center;
+        font-size: 280%;
+        margin-top: 3%;
+    }
+}
+
+.gsapTitle {
+    width: 80%;
+    margin: 5% auto 0 auto;
+    max-height: 400px;
+    .superman {
+        max-height: 400px;
+        position: relative;
+        img{
+            position: relative;
+            width: 25%;
+            left: -70%;
+        }
+        p{
+            font-family: ASAP_BOLD;
+            text-align: center;
+            font-size: 440%;
+        }
+    }
+    .mainTitle{
+        position: relative;
+        // right: -50px;
+        margin-top: -90px;
+    }
+
+    
+}
+.greenText {
+    color: #88ce02;
+}
+
+.asapReg {
+    font-family: ASAP;
+}
 
