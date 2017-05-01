@@ -1,2 +1,95 @@
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
 
+@font-face {
+    src: url(../fonts/Asap-Regular.ttf);
+    font-family: ASAP;
+}
+
+@font-face {
+    src: url(../fonts/Asap-Bold.ttf);
+    font-family: ASAP_BOLD;
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #000000;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    color: #ffffff;
+    font-family: ASAP;
+}
+
+.content-holder {
+    position: relative;
+    width: 80%;
+    height: 85%;
+    margin: 0 auto;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .tools {
+        margin: 50px auto 0 auto;
+        height: 100px;
+        max-width: 800px;
+        text-align: center;
+
+    }
+
+    .tools img {
+        height: 80%;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 280%;
+        margin-top: 3%;
+    }
+}
+
+.gsapTitle {
+    width: 80%;
+    margin: 5% auto 0 auto;
+    max-height: 400px;
+    .superman {
+        max-height: 400px;
+        position: relative;
+
+    }
+
+    .superman img{
+        width: 25%;
+    }
+
+    .mainTitle{
+        position: relative;
+        right: -50px;
+        margin-top: -90px;
+    }
+
+    .superman p{
+        font-family: ASAP_BOLD;
+        text-align: center;
+        font-size: 440%;
+    }
+}
+.greenText {
+    color: #88ce02;
+}
+
+.asapReg {
+    font-family: ASAP;
+}
+

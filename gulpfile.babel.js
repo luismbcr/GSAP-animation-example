@@ -44,7 +44,10 @@ gulp.task('js',()=>{
 gulp.task('assets',()=>{
 	gulp.src(`${config.src}img/*`)
 	.pipe(imagemin())
-	.pipe(gulp.dest(`${config.dest}img/`))
+	.pipe(gulp.dest(`${config.dest}img/`));
+
+    gulp.src(`${config.src}fonts/*`)
+    .pipe(gulp.dest(`${config.dest}fonts/`));
 });
 
 gulp.task('serve', ['sass','js','html','assets'], ()=>{
