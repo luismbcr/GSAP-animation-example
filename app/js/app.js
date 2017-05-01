@@ -2,15 +2,40 @@ var $ = require('jquery');
 require('./vendors/bootstrap');
 
 $(document).ready(function(){
-    startTween();  
+    init();  
 })
 
-function startTween(){
-    // params : ELEMENT, TIME in SECONDS, Literal Object with custom animation
-    TweenLite.to($('#toolBox'),1,{delay:1,x:290, y:230, scale:1.5, onComplete:returnToNormal});
-    TweenLite.to($('.asapReg'),1, {color: "#ff0000", fontSize: "+=75"})
-}
+function init(){
+    var toolTimeline = new TimelineLite();
+    var duration = 1;
+    toolTimeline.add( TweenLite.to($('#toolBox'), duration,{y: -100}));
+    toolTimeline.add( TweenLite.to($('#weightLifter'), duration,{y: -100}));
+    toolTimeline.add( TweenLite.to($('#crazy'), duration,{y: -100}));
+    toolTimeline.add( TweenLite.to($('#leaf'), duration,{y: -100}));
 
-function returnToNormal(){
-    TweenLite.to($('#toolBox'),1,{x:0, y:0, scale:1});
+    //Events
+    //Jquery elements
+    var $startBtn = $('#start'),
+        $pauseBtn = $('#pause'),
+        $reverseBtn = $('#reverse'),
+        $stopBtn = $('#stop');
+
+
+    $startBtn.on('click',function(){
+        toolTimeline.play();
+    });
+
+    $pauseBtn.on('click',function(){
+        toolTimeline.pause();
+    });
+
+    $stopBtn.on('click',function(){
+        toolTimeline.stop();
+    });
+
+    $reverseBtn.on('click',function(){
+        toolTimeline.reverse();
+    });
+
+
 }
