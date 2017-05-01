@@ -62,11 +62,14 @@ body {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     .tools {
+        position: relative;
+        top:-150px;
         margin: 50px auto 0 auto;
         height: 100px;
         max-width: 800px;
         text-align: center;
         img {
+            position: relative;
             height: 80%;
             margin-right: 15px;
             margin-left: 15px;
@@ -89,24 +92,24 @@ body {
     .superman {
         max-height: 400px;
         position: relative;
-
+        img{
+            position: relative;
+            width: 25%;
+            left: -70%;
+        }
+        p{
+            font-family: ASAP_BOLD;
+            text-align: center;
+            font-size: 440%;
+        }
     }
-
-    .superman img{
-        width: 25%;
-    }
-
     .mainTitle{
         position: relative;
-        right: -50px;
+        // right: -50px;
         margin-top: -90px;
     }
 
-    .superman p{
-        font-family: ASAP_BOLD;
-        text-align: center;
-        font-size: 440%;
-    }
+    
 }
 .greenText {
     color: #88ce02;
