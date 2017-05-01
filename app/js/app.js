@@ -1,42 +1,18 @@
 var $ = require('jquery');
 require('./vendors/bootstrap');
 
-$(document).ready(function(){
-    init();  
-})
 
+$(window).on('load', function(){
+    init();  
+});
 function init(){
     //Pass params to timeline
-    var toolTimeline = new TimelineLite({paused: true});
+    var toolTimeline = new TimelineMax();
     var duration = 0.5;
-    toolTimeline.add( TweenLite.to($('#toolBox'), duration,{y: -100, ease: Linear.easeInOut}));
-    toolTimeline.add( TweenLite.to($('#weightLifter'), duration,{y: -100, ease: Bounce.easeInOut}));
-    toolTimeline.add( TweenLite.to($('#crazy'), duration,{y: -100, ease: Elastic.easeInOut}));
-    toolTimeline.add( TweenLite.to($('#leaf'), duration,{y: -100, ease: Back.easeInOut}));
+    toolTimeline.from($('.mainTitle'), duration,{opacity:0, scale: 25, ease: Linear.easeInOut});
+    toolTimeline.from($('.title'), duration,{opacity:0, scale: 25, ease: Linear.easeInOut},2);
+    // toolTimeline.to($('#crazy'), duration,{y: -100, ease: Elastic.easeInOut});
+    // toolTimeline.to($('#leaf'), duration,{y: -100, ease: Back.easeInOut});
 
-    //Events
-    //Jquery elements
-    var $startBtn = $('#start'),
-        $pauseBtn = $('#pause'),
-        $reverseBtn = $('#reverse'),
-        $stopBtn = $('#stop');
-
-
-    $startBtn.on('click',function(){
-        toolTimeline.play();
-    });
-
-    $pauseBtn.on('click',function(){
-        toolTimeline.pause();
-    });
-
-    $stopBtn.on('click',function(){
-        toolTimeline.stop();
-    });
-
-    $reverseBtn.on('click',function(){
-        toolTimeline.reverse();
-    });
-
-
+    
 }
